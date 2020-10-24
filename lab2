@@ -1,0 +1,148 @@
+#include "iostream"
+#include "iso646.h"
+
+using namespace std;
+int main( )
+{
+    int x, y, c, a, b, z, d, i, n, g, e, r,t,o;
+    g = 1;
+    cout << "pervoe zadanie vvedite 3 chisla" << endl;
+    cin >> x;
+    cin >> y;
+    cin >> c;
+   
+    cout << "X & Y nechetnie - ";
+    if (((abs(x) % 2) == 1) && ((abs(y) % 2) == 1)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+    
+    cout << "tolbko X ili tolbko Y <20 - ";
+ 
+    if ((x < 20) ^ (y < 20)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+    cout << "X ili Y =0 -";
+    if ((x == 0) || (y == 0)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+   
+    cout << " X & Y & Z <0 -";
+    if ((x < 0) && (y < 0) && (c < 0)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+    
+    cout << "tolbko 1 iz X,Y,Z kratno 5 - ";
+    if ((((abs(x) % 5) == 0) ^ ((abs(y) % 5) == 0) ^ ((abs(c) % 5) == 0)) && !(((abs(x) % 5) == 0) && ((abs(y) % 5) == 0) && ((abs(c) % 5) == 0))) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+   
+    cout << "X ili Y ili Z >100 -";
+    if ((x > 100) || (y > 100) || (c > 100)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+   
+    
+    cout << "3adaite pari koordinat dlya 2 shahmatnix  figur <8" << endl;
+    cout << "figura A" << endl;
+    cin >> a >> b;
+    std::pair <int, int> p1;
+    p1.first = a;
+    p1.second = b;
+    cout << "figura B" << endl;
+    cin >> z >> d;
+    std::pair <int, int> p2;
+    p2.first = z;
+    p2.second = d;
+    
+    cout << "ladia on A hit B - " ;
+    if ((a == z) ^ (b == d)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+   
+    cout << "slon on A hit B -" ;
+    if ((abs(a - z)) == (abs(b - d))) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+    
+    cout << "king on A 1 xodom v B -";
+    if (((abs(a - z)) <= 1) && ((abs(b - d)) <= 1)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+   
+    cout << "koroleva on A hit B - ";
+    if (((a == z) ^ (b == d)) ^ ((abs(a - z)) == (abs(b - d)))) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+   
+    cout << "peshka on A go to B in 1 xod - ";
+    if (a == (z + 1)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+    
+    cout << "peshka on A hit B - ";
+    if ((a == (z + 1)) && ((abs(a - z)) <= 1)) {
+        cout << "istina" << endl;
+    }
+    else { cout << "loj" << endl; }
+    
+    cout << "tablica umnojeniya na 7" << endl;
+    for (i = 1; i <= 9; i++) {
+        cout << i << "*7=" << i * 7 << endl;
+    }
+    cout << "vvedite chislo dlya tablici ymnojeniya na nego :" << endl;
+    cin >> n;
+    for (i = 1; i <= 9; i++) {
+        cout << i << "*" << n << "=" << i * n << endl;
+    }
+   
+    
+    cout << "proizvedenie chisel ot 8 do 15 " << endl;
+    g = 1;
+    for (i = 8; i <= 15; i++) {
+        g = g * i;
+    }
+    cout << g << endl;
+   
+    
+    cout << "proizvedenie chisel ot a do 20" << endl;
+    cout << "vvedite a:" ;
+    cin >> e;
+    g = 1;
+    for (i = e; i <= 20; i++) {
+        g = g * i;
+    }
+    cout << abs(g) << endl;
+   
+    
+    cout << "proivedenie chisel ot 1 do b" << endl;
+    g = 1;
+    cout << "vvedite b: " ;
+    cin >> r;
+    for (i = 1; i <= r; i++) {
+        g = g * i;
+    }
+    cout << g << endl;
+    
+    
+    cout << "proivedenie chisel ot a do b " << endl;
+    g = 1;
+    cout << "vvedite a & b (a<=b):" ;
+    cin >> t >> o;
+    for (i = t; i <= o; i++) {
+        g = g * i;
+    }
+    cout <<"proizvedenie ="<< abs(g) << endl;
+    system("pause");
+    return 0;
+}
